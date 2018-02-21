@@ -1,0 +1,3 @@
+Tests:
+1. Empty input: should return zero for word, line and character count
+2. Unusually large input: to check if storing the counts in integers is enough to prevent overflow
