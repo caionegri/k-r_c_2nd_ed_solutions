@@ -20,10 +20,9 @@ void copy(char line[], char from[]);
  * @return zero
  */
 int main(int argc, char *argv[]) {
-    int len, len_buffer;    // current line lennght
-    char line[MAXLINE];     // current input line
+    int len, len_buffer = 0;        // current line lennght
+    char line[MAXLINE] = {'\0'};    // current input line
 
-    len_buffer = 0;
     while((len = getLine(line, MAXLINE)) > 0) {
         // check for line overflow and add to lenght buffer or reset
         if(line[len-1] == '\n') {
@@ -46,9 +45,9 @@ int main(int argc, char *argv[]) {
  * @return line lenght
  */
 int getLine(char s[], int lim) {
-    int c, i;
+    int c = 0, i = 0;
 
-    for(i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+    for(; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
         s[i] = c;
     if(c == '\n') {
         s[i] = c;

@@ -13,7 +13,7 @@
 #define NCOLS 8     /* number of columns between tab stops */
 
 int getLine(char line[], int maxline);
-void replaceBlanks(char lineB[], char line[]);
+void replaceBlanks(char lineB[], char line[], int ncols);
 
 /**
  * @brief Replace blanks in input with the minimum amount of tabs and blanks
@@ -24,7 +24,7 @@ void replaceBlanks(char lineB[], char line[]);
  * @return zero
  */
 int main(int argc, char *argv[]) {
-    int len = 0;                            /* current line lenght */
+    int len = 0;                        /* current line lenght */
     char line[MAXLINE] = {'\0'};        /* current input line */
     char lineTabs[MAXLINE] = {'\0'};    /* input line with no tabs */
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     printf("Tab stops are set every %d columns\n", NCOLS);
     
     while((len = getLine(line, MAXLINE)) > 0) {
-        replaceBlanks(lineTabs, line);
+        replaceBlanks(lineTabs, line, NCOLS);
         printf("%s", lineTabs);
     }
     return 0;
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 int getLine(char s[], int lim) {
     int c = '\0', i = 0;
 
-    for(i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+    for(; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
         s[i] = c;
     if(c == '\n') {
         s[i] = c;
@@ -64,7 +64,7 @@ int getLine(char s[], int lim) {
  * @param line input array
  * @return @c void
  */
-void replaceBlanks(char lineB[], char line[]) {
+void replaceBlanks(char lineB[], char line[], int ncols) {
     int i = 0, j = 0, nblanks = 0;
 
     while(line[j] != '\0') {
@@ -75,10 +75,10 @@ void replaceBlanks(char lineB[], char line[]) {
                 /* (j-nblanks) is the column being filled. 
                  * If the the number of blanks left is greater or equal than
                  * the distance to the next tab stop, place a tab. */
-                if(nblanks >= NCOLS - (j-nblanks)%NCOLS) {  
+                if(nblanks >= ncols - (j-nblanks)%ncols) {  
                     lineB[i] = '\t';
                     ++i;
-                    nblanks -= NCOLS - (j-nblanks)%NCOLS;
+                    nblanks -= ncols - (j-nblanks)%ncols;
                 }
                 /* Place blank since we won't hit the next tab stop */
                 else {

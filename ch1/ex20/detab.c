@@ -13,7 +13,7 @@
 #define NCOLS 8     /* number of columns between tab stops */
 
 int getLine(char line[], int maxline);
-void replaceTabs(char lineB[], char line[]);
+void replaceTabs(char lineB[], char line[], int ncols);
 
 /**
  * @brief Replace tabs in input with the proper amount of blanks to space
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     printf("Tab stops are set every %d columns\n", NCOLS);
     
     while((len = getLine(line, MAXLINE)) > 0) {
-        replaceTabs(lineNoTabs, line);
+        replaceTabs(lineNoTabs, line, NCOLS);
         printf("%s", lineNoTabs);
     }
     return 0;
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 int getLine(char s[], int lim) {
     int c = '\0', i = 0;
 
-    for(i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+    for(; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
         s[i] = c;
     if(c == '\n') {
         s[i] = c;
@@ -63,14 +63,14 @@ int getLine(char s[], int lim) {
  * @param line input array
  * @return @c void
  */
-void replaceTabs(char lineB[], char line[]) {
+void replaceTabs(char lineB[], char line[], int ncols) {
     int i = 0, j = 0;
 
     while(line[j] != '\0') {
         if(line[j] == '\t') {
             lineB[i] = ' '; /* replace tab with space */
             ++i;
-            while(i%NCOLS != 0) {   /* place more spaces until next tab stop */
+            while(i%ncols != 0) {   /* place more spaces until next tab stop */
                 lineB[i] = ' ';
                 ++i;
             }
