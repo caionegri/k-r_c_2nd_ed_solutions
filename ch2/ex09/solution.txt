@@ -1,0 +1,7 @@
+When subtracting 01 (0..0001) from X (x...xxxx), if the rightmost bit of x is 1, then it is imediately turned to zero. However, if the bit is zero, then it borrows from the most significant bits following the rules of binary subtraction. That has the desired effect of turning the first bit with value 1 into 0, but also inverts the bits before that. Let's assume x = 1100, then:
+
+1100 - 0001 = 1011
+
+By doing bitwise AND between that result and the original value of x, we keep the desired effect and revert the undesired inversion of the previous bits:
+
+1100 & 1011 = 1000
