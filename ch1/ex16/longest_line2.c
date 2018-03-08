@@ -1,9 +1,11 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-16.
+ *
  * @file longest_line2.c
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-16
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 11 Feb 2018 
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
 
 #include <stdio.h>
@@ -14,7 +16,8 @@ int getLine(char line[], int maxline);
 void copy(char line[], char from[]);
 
 /**
- * @brief Print longest input line (last characters) and it's length
+ * @brief Print longest input line (last characters) and it's length.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -46,7 +49,8 @@ int main(int argc, char *argv[]) {
 }
 
 /**
- * @brief Read a line and save into s, return length 
+ * @brief Read a line and save into s, return length.
+ *  
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -65,7 +69,8 @@ int getLine(char s[], int lim) {
 }
 
 /**
- * @brief Copy 'from' into 'to'; assume 'to' is big enough 
+ * @brief Copy 'from' into 'to'; assume 'to' is big enough.
+ *  
  * @param to output array
  * @param from input array
  * @return @c void

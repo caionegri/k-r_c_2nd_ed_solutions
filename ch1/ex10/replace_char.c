@@ -1,14 +1,18 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-10.
+ *
  * @file replace_char.c
- * @brief The C Programming Language - 2nd Edition,
- * Excercise 1-10
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 /**
- * @brief Replace tabs, backspaces and backlashes by their escape sequences
+ * @brief Replace tabs, backspaces and backlashes by their escape sequences.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 

@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-15.
+ *
  * @file temp_func.c
- * @brief The C Programming Language - 2nd Edition,
- * Excercise 1-15
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define LOWER 0     // lower temperature limit
@@ -14,7 +17,8 @@
 float fahrToCels(int fahr);
 
 /**
- * @brief Print Fahrenheit-Celsius table
+ * @brief Print Fahrenheit-Celsius table.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 
@@ -29,7 +33,8 @@ int main(int argc, char *argv[]) {
 }
 
 /**
- * @brief Convert temperature in Fahrenheit to Celcius
+ * @brief Convert temperature in Fahrenheit to Celcius.
+ * 
  * @param fahr temperature in Fahrenheit
  * @return temperature in Celcius 
  */

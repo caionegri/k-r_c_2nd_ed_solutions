@@ -1,12 +1,18 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-9.
+ *
  * @file single_blank.c
- * @brief The C Programming Language - 2nd Edition,
- * Excercise 1-9
+ * @version 1.0
+ * @author Caio A N Rocha
+ * @date 08/03/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 /**
  * @brief Replace multiple blanks with a single one
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 

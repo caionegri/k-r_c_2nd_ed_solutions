@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-5.
+ *
  * @file fahr_cels.c
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-5
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define LOWER 0     /* lower temperature limit */

@@ -1,10 +1,10 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-23.
+ * 
  * @file nocomment.c
  * @version 1.0
  * @author Caio A N Rocha
  * @date 24/02/2018
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-23.
  * @see https://github.com/caionegri 
  */
 
@@ -17,7 +17,8 @@
 int getLine(char line[], int maxline);
 
 /**
- * @brief 
+ * @brief Remove comments from code.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -66,6 +67,7 @@ int main(int argc, char *argv[]) {
 
 /**
  * @brief Read a line and save into s, return length.
+ * 
  * @param s line
  * @param lim maximum line length
  * @return line lenght

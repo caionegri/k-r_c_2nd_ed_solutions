@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-2.
+ * 
  * @file backslash_test.c
- * @brief The C Programming Language - 2nd Edition, Exercise 1-2
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018 
+ * @date 14/02/2018 
  * @see https://en.wikipedia.org/wiki/Escape_sequences_in_C
  */
+
 #include <stdio.h>
 
 /**

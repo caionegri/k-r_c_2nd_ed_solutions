@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-13.
+ *
  * @file word_hist.c
- * @brief The C Programming Language - 2nd Edition,
- * Excercise 1-13
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define IN 1        // inside a word
@@ -13,6 +16,7 @@
 
 /**
  * @brief Prints histogram of word length in input
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 

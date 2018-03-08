@@ -1,12 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-22.
+ * 
  * @file fold.c
  * @version 1.0
  * @author Caio A N Rocha
  * @date 23/02/2018
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-22
  * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define MAXLINE 80  /* maximum input line size */
@@ -22,6 +23,7 @@ void splitLine(char line[], char lineB[], int splPoint);
  * @brief Fold input lines longer than the maximum size. The folding point is
  * at the last blank charcter. When there are no blanks, folding is indicated 
  * with an underscore.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -58,6 +60,7 @@ int main(int argc, char *argv[]) {
 
 /**
  * @brief Read a line and save into s, return length.
+ * 
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -77,7 +80,8 @@ int getLine(char s[], int lim) {
 
 
 /**
- * @brief Find the point where line reaches the maximum number or columns
+ * @brief Find the point where line reaches the maximum number or columns.
+ * 
  * @param line input array
  * @param length input array lenght
  * @return index
@@ -104,6 +108,7 @@ int findFoldPoint(char line[], int ncols, int maxcols) {
 /**
  * @brief Find last blank (space or tab) in @p line before index @p i and
  * return it's index.
+ * 
  * @param line input array
  * @param index starting index
  * @return index of last blank
@@ -123,6 +128,7 @@ int findLastBlank(char line[], int index) {
 /**
  * @brief Split char array @p line at index @p splPoint placing a line feed
  * and save the rest (starting at @p index) in @p lineB.
+ * 
  * @param line 
  * @param lineB 
  * @param splPoint 

@@ -1,14 +1,17 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-14.
+ *
  * @file char_hist.c
- * @brief The C Programming Language - 2nd Edition,
- * Excercise 1-14
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
- * @see https://github.com/caionegri
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 /**
- * @brief Prints histogram of character (A-Z) frequency input
+ * @brief Prints histogram of character (A-Z) frequency input.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 

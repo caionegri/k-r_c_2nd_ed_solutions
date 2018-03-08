@@ -1,10 +1,10 @@
 /**
+ * @brief C Programming Language - 2nd Edition, Exercise 1-24.
+ * 
  * @file ubalanced_check.c
  * @version 1.0
  * @author Caio A N Rocha
  * @date 26/02/2018
- * @brief C Programming Language - 2nd Edition, 
- * Exercise 1-24.
  * @see https://github.com/caionegri 
  */
 
@@ -17,7 +17,8 @@
 int getLine(char line[], int maxline);
 
 /**
- * @brief 
+ * @brief Check for rudimentary syntax errors like unbalanced braces and brackets.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -86,6 +87,7 @@ int main(int argc, char *argv[]) {
 
 /**
  * @brief Read a line and save into s, return length.
+ * 
  * @param s line
  * @param lim maximum line length
  * @return line lenght

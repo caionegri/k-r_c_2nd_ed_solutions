@@ -1,12 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-20.
+ * 
  * @file detab.c
  * @version 1.0
  * @author Caio A N Rocha
  * @date 15 Feb 2018
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-20.
  * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define MAXLINE 100 /* maximum input line size */
@@ -18,6 +19,7 @@ void replaceTabs(char lineB[], char line[], int ncols);
 /**
  * @brief Replace tabs in input with the proper amount of blanks to space
  * to the next tab stop and print resulting line.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -39,6 +41,7 @@ int main(int argc, char *argv[]) {
 
 /**
  * @brief Read a line and save into s, return length.
+ * 
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -59,6 +62,7 @@ int getLine(char s[], int lim) {
 /**
  * @brief Replace tabs in @p line with the proper amount of blanks to space
  * to the next tab stop, save result in @p lineB.
+ * 
  * @param lineB array with spaces instead of tabs
  * @param line input array
  * @return @c void

@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-17.
+ *
  * @file long_lines.c
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-17
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 12 Feb 2018 
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define MAXLINE 100  // maximum input line size
@@ -14,7 +17,8 @@ int getLine(char line[], int maxline);
 void copy(char line[], char from[]);
 
 /**
- * @brief Print only long lines and their length
+ * @brief Print only long lines and their length.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -39,7 +43,8 @@ int main(int argc, char *argv[]) {
 }
 
 /**
- * @brief Read a line and save into s, return length 
+ * @brief Read a line and save into s, return length.
+ *  
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -58,7 +63,8 @@ int getLine(char s[], int lim) {
 }
 
 /**
- * @brief Copy 'from' into 'to'; assume 'to' is big enough 
+ * @brief Copy 'from' into 'to'; assume 'to' is big enough.
+ *  
  * @param to output array
  * @param from input array
  * @return @c void

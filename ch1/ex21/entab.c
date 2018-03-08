@@ -1,12 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-21.
+ * 
  * @file entab.c
  * @version 1.0
  * @author Caio A N Rocha
  * @date 19/02/2018
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-21.
  * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define MAXLINE 100 /* maximum input line size */
@@ -19,6 +20,7 @@ void replaceBlanks(char lineB[], char line[], int ncols);
  * @brief Replace blanks in input with the minimum amount of tabs and blanks
  * to achieve the same spacing and print resulting line. Only works properly for
  * lines below the maximum length.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -40,6 +42,7 @@ int main(int argc, char *argv[]) {
 
 /**
  * @brief Read a line and save into s, return length.
+ * 
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -60,6 +63,7 @@ int getLine(char s[], int lim) {
 /**
  * @brief Replace strings of blanks in @p line with the minimum amount of tabs and
  * blanks to achieve the same spacing.
+ * 
  * @param lineB array with spaces instead of tabs
  * @param line input array
  * @return @c void

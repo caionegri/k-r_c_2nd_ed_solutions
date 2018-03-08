@@ -1,18 +1,21 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-12.
+ *
  * @file 1word.c
- * @brief The C Programming Language - 2nd Edition,
- * Exercise 1-12
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 14 Feb 2018
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define IN 1    /* inside a word */
 #define OUT 0   /* outside a word */
 
 /**
- * @brief count lines, words and characters in input 
- * and also prints input one word per line
+ * @brief Count lines, words and characters in input. Print one word per line.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero 

@@ -1,10 +1,13 @@
 /**
+ * @brief The C Programming Language - 2nd Edition, Exercise 1-18
+ *
  * @file tblanks.c
- * @brief The C Programming Language - 2nd Edition, 
- * Exercise 1-18
+ * @version 1.0
  * @author Caio A N Rocha
- * @date 12 Feb 2018 
+ * @date 14/02/2018
+ * @see https://github.com/caionegri 
  */
+
 #include <stdio.h>
 
 #define MAXLINE 100  /* maximum input line size */
@@ -14,7 +17,8 @@ void removeTBlanks(char lineSB[], char line[]);
 int isBlank(char line[]);
 
 /**
- * @brief Remove trailing blanks and tabs from input lines and print non blank lines
+ * @brief Remove trailing blanks and tabs from input lines and print non blank lines.
+ * 
  * @param argc command line argument count
  * @param argv command line argument vector
  * @return zero
@@ -35,7 +39,8 @@ int main(int argc, char *argv[]) {
 }
 
 /**
- * @brief Read a line and save into s, return length 
+ * @brief Read a line and save into s, return length.
+ *  
  * @param s line
  * @param lim maximum line length
  * @return line lenght
@@ -55,7 +60,8 @@ int getLine(char s[], int lim) {
 
 /**
  * @brief Remove trailing blanks and trailing tabs from 'input' 
- * and saves result into 'output'; assume 'output' is big enough
+ * and saves result into 'output'; assume 'output' is big enough.
+ * 
  * @param lineSB array without trailing blanks and tabs
  * @param line input array
  * @return @c void
@@ -79,7 +85,8 @@ void removeTBlanks(char lineSB[], char line[]) {
 }
 
 /**
- * @brief Check if line is blank
+ * @brief Check if line is blank.
+ * 
  * @param line input array
  * @return one for true or zero for false 
  */
