@@ -1,0 +1,2 @@
+## The C Programming Language - 2nd Edition, Exercise 3-3.
+In a two's complement signed number representation, the maximum negative number is bigger in magnitude than the maximum positive number by 1 (see Excercise 3-1). As such, inverting the maximum negative number would cause integer overflow.
